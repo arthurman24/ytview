@@ -114,7 +114,7 @@
  [],
  False,
  False,
- 1688685441,
+ 1688686461,
  [('run.exe',
    'C:\\Users\\BLUE I.T '
    'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\run.exe',

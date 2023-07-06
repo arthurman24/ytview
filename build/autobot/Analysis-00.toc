@@ -381,9 +381,17 @@
    'C:\\Users\\BLUE I.T '
    'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\ast.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\BLUE I.T '
+   'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\tracemalloc.py',
+   'PYMODULE'),
   ('stringprep',
    'C:\\Users\\BLUE I.T '
    'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\stringprep.py',
+   'PYMODULE'),
+  ('_py_abc',
+   'C:\\Users\\BLUE I.T '
+   'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\_py_abc.py',
    'PYMODULE'),
   ('getpass',
    'C:\\Users\\BLUE I.T '
@@ -424,14 +432,6 @@
   ('http.client',
    'C:\\Users\\BLUE I.T '
    'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\http\\client.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\BLUE I.T '
-   'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\tracemalloc.py',
-   'PYMODULE'),
-  ('_py_abc',
-   'C:\\Users\\BLUE I.T '
-   'COMPUTER\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\_py_abc.py',
    'PYMODULE'),
   ('colorama',
    'C:\\Users\\BLUE I.T '
