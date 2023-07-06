@@ -97,7 +97,9 @@ if __name__ == '__main__':
     with open("title.txt", "r", encoding="utf-8") as f:
         video_title = f.read().strip()
 
-    folder_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\chromeprofile"
+    # Specify the folder path where the profile directories are located
+    get_folder = os.getcwd()
+    folder_path = f"{get_folder}\\chromeprofile"
 
     # List of profile paths
     profile_paths = [os.path.join(folder_path, name) for name in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, name))]  

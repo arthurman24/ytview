@@ -2,6 +2,7 @@ import undetected_chromedriver as uc
 import time
 import os
 import threading
+import sys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -92,7 +93,8 @@ with open("title.txt", "r", encoding="utf-8") as f:
     video_title = f.read().strip()
 
 # Specify the folder path where the profile directories are located
-folder_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\chromeprofile"
+get_folder = os.getcwd()
+folder_path = f"{get_folder}\\chromeprofile"
 
 # Retrieve profile directories from the folder path
 profile_directories = [os.path.join(folder_path, name) for name in os.listdir(folder_path) if os.path.isdir(os.path.join(folder_path, name))]

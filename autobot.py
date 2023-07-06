@@ -37,7 +37,7 @@ print(Fore.LIGHTYELLOW_EX + "Menonton:", (max_watch),"Menit")
 if feature_input == "1":
     run_script('viewer2.py', max_watch)
 elif feature_input == "2":
-    run_script('viewer1.py', max_watch)
+    run_script('viewer.py', max_watch)
 elif feature_input == "3":
     run_script('gmail.py', max_watch)
 else:

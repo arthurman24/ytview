@@ -8,7 +8,9 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
-folder_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\chromeprofile"
+# Specify the folder path where the profile directories are located
+get_folder = os.getcwd()
+folder_path = f"{get_folder}\\chromeprofile"
 max_watch = int(sys.argv[1])
 
 # Read login credentials from a text file
