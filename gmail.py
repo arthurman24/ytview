@@ -1,6 +1,7 @@
 import undetected_chromedriver as uc
 import time
 import os
+import sys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
@@ -8,6 +9,7 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 
 folder_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\chromeprofile"
+max_watch = int(sys.argv[1])
 
 # Read login credentials from a text file
 credentials = []
@@ -49,29 +51,25 @@ for i, profile_path in enumerate(profile_paths):
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    foxyproxy_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\youtubeview\\foxyproxy"  # Replace with the actual path to the FoxyProxy extension file
-    options.add_argument(f'--load-extension={foxyproxy_path}')
+    # foxyproxy_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\foxyproxy"  # Replace with the actual path to the FoxyProxy extension file
+    # options.add_argument(f'--load-extension={foxyproxy_path}')
 
     # use specific (older) version
     driver = uc.Chrome(
         suppress_welcome=False,
-        options = options , version_main = 94
-    )  # version_main allows to specify your chrome version instead of following chrome global version
+        options = options
+    ) 
 
     driver.set_window_size(1000, 800)
     
     drivers.append(driver)
 
     try:
-        # Perform actions in the Chrome instance
-        # ...
-        driver.get("https://stackoverflow.com/users/signup?ssrc=head&returnurl=%2fusers%2fstory%2fcurrent")
+        driver.get("https://accounts.google.com/v3/signin/identifier?dsh=S-1727523073%3A1688684411243226&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&ifkv=AeDOFXgYyOctEzUEfaTCAzNeV4T1SDO-n11c-kzFyVlJocKCKMCTi1o_24B3lMIicHNGt6tRQARy&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin")
 
-        WebDriverWait(driver, 120).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="openid-buttons"]/button[1]')))
-
-        button = driver.find_element(By.XPATH, '//*[@id="openid-buttons"]/button[1]')
-
-        button.click()
+        # WebDriverWait(driver, 120).until(EC.visibility_of_element_located((By.XPATH, '//*[@id="openid-buttons"]/button[1]')))
+        # button = driver.find_element(By.XPATH, '//*[@id="openid-buttons"]/button[1]')
+        # button.click()
 
         email, password = credentials[i % len(credentials)]
 
@@ -105,4 +103,5 @@ for i, profile_path in enumerate(profile_paths):
 
     except Exception as e:
         print(f"Error occurred while opening Chrome with Error: {str(e)}")    
-time.sleep(1000)
+        
+time.sleep(max_watch)
