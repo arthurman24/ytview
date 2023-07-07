@@ -100,10 +100,7 @@ for i, profile_path in enumerate(profile_paths):
 
         time.sleep(5)
 
-        # Now you should be logged in and can perform further actions
-        driver.get('https://www.google.com/')
-
     except Exception as e:
         print(f"Error occurred while opening Chrome with Error: {str(e)}")    
         
-time.sleep(max_watch)
+time.sleep(60 * max_watch)
