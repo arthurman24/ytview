@@ -49,16 +49,16 @@ for i, profile_path in enumerate(profile_paths):
     options.add_argument(f"--user-data-dir={profile_path}")
     options.add_argument("--no-default-browser-check")
     options.add_argument("--mute-audio")
-    options.add_argument('--disable-notifications')
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
 
-    # foxyproxy_path = "C:\\Users\\BLUE I.T COMPUTER\\Documents\\seo\\youtubeview\\foxyproxy"  # Replace with the actual path to the FoxyProxy extension file
-    # options.add_argument(f'--load-extension={foxyproxy_path}')
+    # Disable popup and welcome screen
+    options.add_argument("--disable-popup-blocking")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-notifications")
 
     # use specific (older) version
     driver = uc.Chrome(
-        suppress_welcome=False,
         options = options
     ) 
 
