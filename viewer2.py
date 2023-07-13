@@ -55,7 +55,7 @@ def run_chrome(profile_path, urls, video_title, proxy):
     # Disable the "Chrome is being controlled by automated test software" message
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
-    #options.add_argument('--proxy-server=%s' % proxy)
+    options.add_argument('--proxy-server=%s' % proxy)
 
     driver = webdriver.Chrome(options=options)
 
