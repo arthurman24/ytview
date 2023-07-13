@@ -19,9 +19,6 @@ def scroll_to_find_video(driver, video_title):
     last_height = driver.execute_script("return document.documentElement.scrollHeight")
 
     while True:
-        driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
-        time.sleep(2)
-
         try:
             video_element = driver.find_element(By.XPATH, f"//a[contains(@title, '{video_title}')]")
             return video_element
@@ -33,6 +30,9 @@ def scroll_to_find_video(driver, video_title):
             break
         last_height = new_height
 
+        driver.execute_script("window.scrollTo(0, document.documentElement.scrollHeight);")
+        time.sleep(2)
+        
     return None
 
 def run_chrome(profile_path, urls, video_title, proxy):
@@ -55,7 +55,7 @@ def run_chrome(profile_path, urls, video_title, proxy):
     # Disable the "Chrome is being controlled by automated test software" message
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
-    options.add_argument('--proxy-server=%s' % proxy)
+    #options.add_argument('--proxy-server=%s' % proxy)
 
     driver = webdriver.Chrome(options=options)
 
